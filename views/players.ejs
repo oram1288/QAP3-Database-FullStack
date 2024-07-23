@@ -7,7 +7,7 @@
                 <b>Players: </b></br> 
             <% if (thePlayers.length > 0) { %>
                 <% thePlayers.forEach(player => { %>
-                    <b><%= player.first_name %> <%= player.last_name %></b>
+                    <b><%= player.first_name %> <%= player.last_name %> <%= player.team_name %></b>
                     <a href="/players/<%=player._id%>/edit?firstName=<%=player.first_name%>&lastName=<%=player.last_name%>&teamName=<%=player.team_name%>">Edit</a>
                     <a href="/players/<%=player._id%>/delete?firstName=<%=player.first_name%>&lastName=<%=player.last_name%>&teamName=<%=player.team_name%>">Delete</a>
                     <a href="/players/<%=player._id%>/replace?firstName=<%=player.first_name%>&lastName=<%=player.last_name%>&teamName=<%=player.team_name%>">Replace</a></br> 

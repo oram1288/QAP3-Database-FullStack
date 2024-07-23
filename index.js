@@ -19,12 +19,6 @@ app.get("/about", (request, response) => {
 const playersRouter = require("./routes/players");
 app.use("/players", playersRouter);
 
-const loginsRouter = require("./routes/logins");
-app.use("/logins", loginsRouter);
-
-const usersRouter = require("./routes/users");
-app.use("/users", usersRouter);
-
 // anything beginning with "/api" will go into this
 const apiRouter = require("./routes/api");
 app.use("/api", apiRouter);
