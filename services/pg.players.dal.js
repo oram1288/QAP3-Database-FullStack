@@ -56,7 +56,7 @@ var putPlayer = function (id, fname, lname, tname) {
   if (DEBUG) console.log("players.pg.dal.putPlayer()");
   return new Promise(function (resolve, reject) {
     const sql =
-      "UPDATE public.player SET first_name=$2, last_name=$3, last_name=$4 WHERE player_id=$1;";
+      "UPDATE public.player SET first_name=$2, last_name=$3, team_name=$4 WHERE player_id=$1;";
     dal.query(sql, [id, fname, lname, tname], (err, result) => {
       if (err) {
         reject(err);
@@ -70,7 +70,7 @@ var patchPlayer = function (id, fname, lname, tname) {
   if (DEBUG) console.log("players.pg.dal.patchPlayer()");
   return new Promise(function (resolve, reject) {
     const sql =
-      "UPDATE public.player SET first_name=$2, last_name=$3, last_name=$4 WHERE player_id=$1;";
+      "UPDATE public.player SET first_name=$2, last_name=$3, team_name=$4 WHERE player_id=$1;";
     dal.query(sql, [id, fname, lname, tname], (err, result) => {
       if (err) {
         reject(err);
